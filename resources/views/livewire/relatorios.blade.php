@@ -25,28 +25,28 @@
                 @switch($report_title)
                     @case('grupos_economicos')
                         @include('livewire.report-filters.grupos-economicos-filtro')
-                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl">
+                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl text-white">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             Extrair
                         </button>
                         @break
                     @case('bandeiras')
                         @include('livewire.report-filters.bandeiras-filtro')
-                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl">
+                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl text-white">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             Extrair
                         </button>
                         @break
                     @case('unidades')
                         @include('livewire.report-filters.unidades-filtro')
-                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl">
+                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl text-white">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             Extrair
                         </button>
                         @break
                     @case('colaboradores')
                         @include('livewire.report-filters.colaboradores-filtro')
-                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl">
+                        <button wire:click="export" class="cursor-pointer h-10 mb-4 border border-neutral-700 p-2 bg-green-500 hover:bg-green-400 rounded-xl text-white">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             Extrair
                         </button>
@@ -80,7 +80,7 @@
                     </tbody>
                 </table>
             @else
-                <div class="ml-4 w-[98%] bg-neutral-600 h-6 text-center">Escolha qual relatório deseja ver.</div>
+                <div class="ml-4 w-[98%] bg-neutral-600 h-6 text-center text-white">Escolha qual relatório deseja ver.</div>
             @endif
         </div>
         

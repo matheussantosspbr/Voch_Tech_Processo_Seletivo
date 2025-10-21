@@ -40,7 +40,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="2" class="p-2 text-center text-neutral-50 rounded-sm">
+                            <td colspan="4" class="p-2 text-center text-neutral-50 rounded-sm">
                                 Nenhum dado no sistema.
                             </td>
                         </tr>
