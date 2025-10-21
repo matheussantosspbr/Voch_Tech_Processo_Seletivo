@@ -67,13 +67,13 @@
                         wire:navigate>
                         {{ __('Relatórios') }}
                     </flux:navlist.item>
-                    {{-- <flux:navlist.item 
+                    <flux:navlist.item 
                         icon="book-open" 
-                        :href="route('relatorios')" 
-                        :current="request()->routeIs('relatorios')" 
+                        :href="route('logs')" 
+                        :current="request()->routeIs('logs')" 
                         wire:navigate>
-                        {{ __('Relatórios') }}
-                    </flux:navlist.item> --}}
+                        {{ __('Atividades') }}
+                    </flux:navlist.item>
                     
                 </flux:navlist.group>
             </flux:navlist>

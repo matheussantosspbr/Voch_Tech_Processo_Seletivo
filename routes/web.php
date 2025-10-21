@@ -53,7 +53,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         });
     });
 
-    Route::get('/logs', Logs::class)->name('relatorios');
+    Route::get('/logs', Logs::class)->name('logs');
 });
 
 Route::middleware(['auth'])->group(function () {
