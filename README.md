@@ -12,7 +12,7 @@ Abra o Terminal:<br/>
 
 4- Renomeio o arquivo `.env.example` para `.env`
 
-5- Crie um banco de dados chamado `laravel`
+5- Crie um banco de dados chamado `voch_tech`
 
 6- no terminal digite `composer install`
 
