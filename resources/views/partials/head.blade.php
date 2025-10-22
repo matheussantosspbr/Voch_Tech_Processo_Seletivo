@@ -22,6 +22,9 @@
 <script src="{{asset('/js/jquery/jquery.mask.min.js')}}"></script>
 <script src="{{asset('/js/main.js')}}"></script>
 
+{{-- ECHART --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/6.0.0/echarts.min.js" integrity="sha512-4/g9GAdOdTpUP2mKClpKsEzaK7FQNgMjq+No0rX8XZlfrCGtbi4r+T/p5fnacsEC3zIAmHKLJUL7sh3/yVA4OQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 @fluxAppearance
 @livewireStyles

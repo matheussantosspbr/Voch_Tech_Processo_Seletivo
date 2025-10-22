@@ -1,7 +1,6 @@
-
 <x-slot:title>Dashboard</x-slot:title>
+
 <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
-    
     <div class="grid auto-rows-min gap-4 md:grid-cols-4">
         <div class="relative aspect-video overflow-hidden rounded-xl border flex border-neutral-200 bg-[hsl(114,100%,50%)] dark:border-neutral-700 items-center justify-center">
             <div class="w-full h-[98%] rounded-xl flex flex-col items-center justify-center bg-white dark:bg-[#262626]">
@@ -9,18 +8,21 @@
                 <p>{{$gruposEconomicos}}</p>
             </div>
         </div>
+
         <div class="relative aspect-video overflow-hidden rounded-xl border flex border-neutral-200 bg-[hsl(114,100%,50%)] dark:border-neutral-700 items-center justify-center">
             <div class="w-full h-[98%] rounded-xl flex flex-col items-center justify-center bg-white dark:bg-[#262626]">
                 <h4>Bandeiras</h4>
                 <p>{{$bandeiras}}</p>
             </div>
         </div>
+
         <div class="relative aspect-video overflow-hidden rounded-xl border flex border-neutral-200 bg-[hsl(114,100%,50%)] dark:border-neutral-700 items-center justify-center">
             <div class="w-full h-[98%] rounded-xl flex flex-col items-center justify-center bg-white dark:bg-[#262626]">
                 <h4>Unidades</h4>
                 <p>{{$unidades}}</p>
             </div>
         </div>
+
         <div class="relative aspect-video overflow-hidden rounded-xl border flex border-neutral-200 bg-[hsl(114,100%,50%)] dark:border-neutral-700 items-center justify-center">
             <div class="w-full h-[98%] rounded-xl flex flex-col items-center justify-center bg-white dark:bg-[#262626]">
                 <h4>Colaboradores</h4>
@@ -28,6 +30,40 @@
             </div>
         </div>
     </div>
-    <div class="relative h-full flex-1 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
+
+    <div class="relative h-full flex-1 flex items-center justify-center overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
+        <div id="chart" class="w-full h-[80%]"></div>
     </div>
 </div>
+
+<script>
+    var chartDom = document.getElementById('chart');
+    var myChart = echarts.init(chartDom);
+    var option = {
+        xAxis: {
+            type: 'category',
+            data: @json($dataGraph['days'])
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                data: @json($dataGraph['count']),
+                type: 'line',
+                smooth: true
+            }
+        ],
+        title: {
+            text: 'Grupos Econômicos',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                fontSize: 24,
+                color: '#fff'
+            }
+        }
+    };
+
+    myChart.setOption(option);
+</script>
